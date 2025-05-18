@@ -11,14 +11,14 @@ body {
 
 h1, h2 {
   text-align: center;
-  color: #111; /* чёрный */
-  text-shadow: 2px 2px 0 #ff2b2b; /* красная тень */
+  color: #111;
+  text-shadow: 2px 2px 0 #ff2b2b;
   user-select: none;
   font-size: 38px;
 }
 
 h1 {
-  font-size: 5rem; /* больше для приветствия */
+  font-size: 5rem;
   margin-bottom: 20px;
 }
 
@@ -49,7 +49,7 @@ button {
   transition: background-color 0.3s ease, transform 0.2s ease;
   user-select: none;
   z-index: 1000;
-  position: static; /* сброс fixed */
+  position: static;
 }
 
 button:active {
@@ -88,8 +88,8 @@ button:hover {
 }
 
 .button-container {
-  position: static; /* убираем fixed */
-  margin-top: -10px; /* небольшой отступ сверху */
+  position: static;
+  margin-top: -10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -100,7 +100,7 @@ button:hover {
   width: 250px;
   height: auto;
   margin-bottom: -5px;
-  margin-top: -10px; /* налезает на кнопку */
+  margin-top: -10px;
   image-rendering: pixelated;
   pointer-events: none;
 }
@@ -111,8 +111,6 @@ button:hover {
     margin-top: 10px;
   }
 }
-
-/* Страница с викториной */
 
 body {
   margin: 0;
@@ -146,10 +144,9 @@ h2 {
   line-height: 1.6;
 }
 
-/* Исправленный контейнер для блоков кода */
 #code-container {
   max-width: 500px;
-  margin: 100px auto; /* центрируем по горизонтали */
+  margin: 100px auto;
   display: flex;
   flex-direction: column;
 }
@@ -167,3 +164,136 @@ h2 {
   margin-left: 12px;
   margin-right: 12px;
 }
+
+.code-block:active {
+  cursor: grabbing;
+  transform: scale(1.03);
+}
+
+
+.code-block:active {
+  cursor: grabbing;
+  transform: scale(1.03);
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  border: 3px solid #ff2b2b;
+  padding: 12px 28px;
+  font-size: 1.6rem;
+  font-family: 'VT323', monospace;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 #ff2b2b;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+button:active {
+  transform: scale(1.05);
+}
+
+button:hover {
+  background-color: #222;
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .code-block {
+    font-size: 16px;
+    padding: 8px 12px;
+    width: 90vw;
+  }
+
+  button {
+    padding: 10px 24px;
+    font-size: 1.4rem;
+  }
+}
+
+#timer {
+  font-size: 1.6rem;
+  margin: 20px 0 0 0;
+  font-family: 'VT323', monospace;
+  color: #000;
+  text-shadow: 2px 2px 0 #ff2b2b;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.modal button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.game-subtitle {
+  font-family: 'VT323', monospace;
+  font-size: 2rem;
+  color: #111;
+  text-shadow: 2px 2px 0 #ff2b2b;
+  user-select: none;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#check-button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+#loseModal button {
+  background-color: #000;
+  color: #fff;
+  border: 3px solid #ff2b2b;
+  box-shadow: 4px 4px 0 #ff2b2b;
+  font-family: 'VT323', monospace;
+  font-size: 1.6rem;
+  padding: 12px 28px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#loseModal button:hover {
+  background-color: #222;
+}
+
+#loseModal button:active {
+  transform: scale(1.05);
+}
+

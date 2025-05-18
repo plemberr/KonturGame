@@ -7,15 +7,18 @@
 </head>
 <body>
 <h2 class="game-subtitle">Расставь блоки в правильном порядке!<span class="blinking-cursor"></span></h2>
-
 <div id="level-display">Уровень: <span id="level">1</span></div>
-<div id="timer" style="font-weight: bold; margin: 10px 0;">Осталось времени: 60 сек</div>
-<div id="task-container"></div>
-<div id="check-button-container">
-  <button onclick="submitOrder()">Проверить</button>
+<div class="task-wrapper">
+  <div id="container-task">
+    <div id="timer" style="font-weight: bold; margin: 10px 0;">Осталось времени: 60 сек</div>
+    <div id="task-container"></div>
+    <div id="check-button-container">
+      <button onclick="submitOrder()">Проверить</button>
+    </div>
+    <div id="result"></div>
+  </div>
 </div>
 
-<div id="result"></div>
 
 <!-- Модальное окно победы -->
 <div id="winModal" class="modal">
