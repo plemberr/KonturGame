@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>KodSort Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Расставь блоки кода правильно</h1>
+<div id="level-display">Уровень: <span id="level">1</span></div>
+<div id="timer" style="font-weight: bold; margin: 10px 0;">Осталось времени: 60 сек</div>
+<div id="task-container"></div>
+<button onclick="submitOrder()">Проверить</button>
+<div id="result"></div>
+
+<!-- Модальное окно победы -->
+<div id="winModal" class="modal">
+  <div class="modal-content">
+    <h2>Поздравляем! Вы победили!</h2>
+    <p id="winScore"></p>
+    <button onclick="restartGame()">Реванш</button>
+  </div>
+</div>
+
+<!-- Модальное окно поражения -->
+<div id="loseModal" class="modal">
+  <div class="modal-content">
+    <h2>Время вышло! Игра окончена.</h2>
+    <p id="loseScore"></p>
+    <button onclick="restartGame()">Реванш</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+

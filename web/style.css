@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'VT323', monospace;
+  background-color: #f5f5f5;
+  color: #111;
+  font-size: 18px;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #111; /* чёрный */
+  text-shadow: 2px 2px 0 #ff2b2b; /* красная тень */
+  user-select: none;
+  font-size: 38px;
+}
+
+h1 {
+  font-size: 5rem; /* больше для приветствия */
+  margin-bottom: 20px;
+}
+
+#welcome-screen, #game-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.intro-text {
+  text-align: center;
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  border: 3px solid #ff2b2b;
+  padding: 14px 32px;
+  font-size: 1.8rem;
+  font-family: 'VT323', monospace;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 #ff2b2b;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  user-select: none;
+  z-index: 1000;
+  position: static; /* сброс fixed */
+}
+
+button:active {
+  transform: scale(1.05);
+}
+
+button:hover {
+  background-color: #222;
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  .code-block {
+    font-size: 16px;
+  }
+  button {
+    padding: 12px 28px;
+    font-size: 1.4rem;
+  }
+}
+
+.blinking-cursor::after {
+  content: '_';
+  animation: blink 1s step-start infinite;
+  color: #000000;
+  margin-left: 4px;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+
+.button-container {
+  position: static; /* убираем fixed */
+  margin-top: -10px; /* небольшой отступ сверху */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+
+.pixel-cat {
+  width: 250px;
+  height: auto;
+  margin-bottom: -5px;
+  margin-top: -10px; /* налезает на кнопку */
+  image-rendering: pixelated;
+  pointer-events: none;
+}
+
+@media (max-width: 480px) {
+  .pixel-cat {
+    width: 200px;
+    margin-top: 10px;
+  }
+}
+
+/* Страница с викториной */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'VT323', monospace;
+  background-color: #f5f5f5;
+  color: #111;
+  font-size: 18px;
+}
+
+#game-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  color: #111;
+  text-shadow: 2px 2px 0 #ff2b2b;
+  user-select: none;
+  font-size: 38px;
+}
+
+.intro-text {
+  text-align: center;
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+#code-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.code-block {
+  background-color: #fff;
+  border: 2px solid #111;
+  padding: 10px 16px;
+  font-size: 20px;
+  cursor: grab;
+  box-shadow: 2px 2px 0 #ff2b2b;
+  transition: transform 0.2s ease;
+  user-select: none;
+}
+
+.code-block:active {
+  cursor: grabbing;
+  transform: scale(1.03);
+}
+
+/* Все кнопки — чёрные */
+button {
+  background-color: #000;
+  color: #fff;
+  border: 3px solid #ff2b2b;
+  padding: 12px 28px;
+  font-size: 1.6rem;
+  font-family: 'VT323', monospace;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 #ff2b2b;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+button:active {
+  transform: scale(1.05);
+}
+
+button:hover {
+  background-color: #222;
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .code-block {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+
+  button {
+    padding: 10px 24px;
+    font-size: 1.4rem;
+  }
+}
+
+#timer {
+  font-size: 2rem;
+  margin-top: 10px;
+  font-family: 'VT323', monospace;
+  color: #000;
+  text-shadow: 2px 2px 0 #ff2b2b;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.modal button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
