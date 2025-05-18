@@ -6,11 +6,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Расставь блоки кода правильно</h1>
+<h2 class="game-subtitle">Расставь блоки в правильном порядке!<span class="blinking-cursor"></span></h2>
+
 <div id="level-display">Уровень: <span id="level">1</span></div>
 <div id="timer" style="font-weight: bold; margin: 10px 0;">Осталось времени: 60 сек</div>
 <div id="task-container"></div>
-<button onclick="submitOrder()">Проверить</button>
+<div id="check-button-container">
+  <button onclick="submitOrder()">Проверить</button>
+</div>
+
 <div id="result"></div>
 
 <!-- Модальное окно победы -->
@@ -18,7 +22,7 @@
   <div class="modal-content">
     <h2>Поздравляем! Вы победили!</h2>
     <p id="winScore"></p>
-    <button onclick="restartGame()">Реванш</button>
+    <button onclick="restartGame()">Взять реванш!</button>
   </div>
 </div>
 
@@ -27,9 +31,11 @@
   <div class="modal-content">
     <h2>Время вышло! Игра окончена.</h2>
     <p id="loseScore"></p>
-    <button onclick="restartGame()">Реванш</button>
+    <p>Хотите взять реванш?</p>  <!-- добавлено -->
+    <button onclick="restartGame()">Взять реванш!</button> <!-- текст кнопки изменён -->
   </div>
 </div>
+
 
 <script src="script.js"></script>
 </body>
