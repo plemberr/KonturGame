@@ -9,10 +9,17 @@ import java.nio.file.Files;
 import java.util.Map;
 
 public class StaticFileHandler implements HttpHandler {
-    private static final Map<String, String> MIME_TYPES = Map.of(
-            ".html", "text/html",
-            ".css", "text/css",
-            ".js", "application/javascript"
+
+    private static final Map<String, String> MIME_TYPES = Map.ofEntries(
+            Map.entry(".html", "text/html"),
+            Map.entry(".css", "text/css"),
+            Map.entry(".js", "application/javascript"),
+            Map.entry(".png", "image/png"),
+            Map.entry(".jpg", "image/jpeg"),
+            Map.entry(".jpeg", "image/jpeg"),
+            Map.entry(".gif", "image/gif"),
+            Map.entry(".svg", "image/svg+xml"),
+            Map.entry(".ico", "image/x-icon")
     );
 
     @Override
@@ -30,7 +37,7 @@ public class StaticFileHandler implements HttpHandler {
             return;
         }
 
-        String contentType = MIME_TYPES.getOrDefault(getExtension(file.getName()), "text/plain");
+        String contentType = MIME_TYPES.getOrDefault(getExtension(file.getName()), "application/octet-stream");
         byte[] response = Files.readAllBytes(file.toPath());
         exchange.getResponseHeaders().add("Content-Type", contentType);
         exchange.sendResponseHeaders(200, response.length);
@@ -43,3 +50,4 @@ public class StaticFileHandler implements HttpHandler {
         return (dot >= 0) ? filename.substring(dot) : "";
     }
 }
+

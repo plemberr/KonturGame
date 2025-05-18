@@ -12,7 +12,7 @@ public class TaskStorage {
                             new CodeBlock(2, "  print(\"Hello, World!\")")
                     )),
                     new Task(2, List.of(
-                            new CodeBlock(1, "name = input(\"Введите своё имя \")"),
+                            new CodeBlock(1, "name = input(\"Enter your name:\")"),
                             new CodeBlock(2, "print(f\"Hello, {name}!\")")
                     )),
                     new Task(3, List.of(
@@ -26,7 +26,7 @@ public class TaskStorage {
                     new Task(5, List.of(
                             new CodeBlock(1, "a , b = 3 , 7"),
                             new CodeBlock(2, "if a < b:"),
-                            new CodeBlock(3, "  print(\"a меньше b\")")
+                            new CodeBlock(3, "  print(\"a less b\")")
                     ))
             ),
             2, List.of(
@@ -46,9 +46,9 @@ public class TaskStorage {
                     new Task(4, List.of(
                             new CodeBlock(1, "x = int(input())"),
                             new CodeBlock(2, "if x % 2 == 0:"),
-                            new CodeBlock(3, "  print(\"Чётное\")"),
+                            new CodeBlock(3, "  print(\"Even\")"),
                             new CodeBlock(4, "else:"),
-                            new CodeBlock(5, "  print(\"Нечётное\")")
+                            new CodeBlock(5, "  print(\"Odd\")")
                     )),
                     new Task(5, List.of(
                             new CodeBlock(1, "try:"),
@@ -76,9 +76,9 @@ public class TaskStorage {
                     new Task(4, List.of(
                             new CodeBlock(1, "vowels ,letter = \"aeiou\",\"a\""),
                             new CodeBlock(2, "if letter in vowels:"),
-                            new CodeBlock(3, "  print(letter, \"Гласная\")"),
+                            new CodeBlock(3, "  print(letter, \"vowel\")"),
                             new CodeBlock(4, "else:"),
-                            new CodeBlock(5, "  print(letter, \"Согласная\")")
+                            new CodeBlock(5, "  print(letter, \"consosant\")")
                     )),
                     new Task(5, List.of(
                             new CodeBlock(1, "age = 20"),
