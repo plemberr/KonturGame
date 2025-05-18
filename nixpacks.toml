@@ -1,0 +1,8 @@
+[phases.setup]
+nixPkgs = ["openjdk17"]
+
+[phases.build]
+cmds = ["echo build done"]
+
+[start]
+cmd = "./start.sh"
