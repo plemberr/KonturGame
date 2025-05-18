@@ -1,3 +1,3 @@
 #!/bin/bash
-javac -cp libs/gson-2.10.1.jar -d out src/server/*.java
+javac -encoding UTF-8 -cp libs/gson-2.10.1.jar -d out src/server/*.java SimpleServer.java
 java -cp "out:libs/gson-2.10.1.jar" server.Main
