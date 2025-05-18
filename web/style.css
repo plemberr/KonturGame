@@ -205,6 +205,7 @@ button:hover {
 }
 
 .task-wrapper {
+  font-size: 50px;
   width: 100%;
   min-height: 70vh;
   display: flex;
